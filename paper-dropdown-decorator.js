@@ -11,7 +11,9 @@
           _this.input.selectedItemLabel = _this.input.value;
         };
       })(this));
-      this.dropdownLabel = this.input.label;
+      if (this.dropdownLabel == null) {
+        this.dropdownLabel = this.input.label;
+      }
       this.input.label = this.label;
     },
     tapAction: function(e) {

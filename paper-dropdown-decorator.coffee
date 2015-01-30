@@ -8,15 +8,15 @@ Polymer
       @input.selectedItemLabel = @input.value
       return
 
-    @dropdownLabel = @input.label
+    @dropdownLabel ?= @input.label
     @input.label = @label
     return
 
   tapAction: (e) ->
     return if @disabled
-    @input? .label = @dropdownLabel
+    @input?.label = @dropdownLabel
     return if @focused
-    @input? .opened = true
+    @input?.opened = true
 
     return
 

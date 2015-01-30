@@ -1,6 +1,6 @@
 (function() {
   Polymer({
-    attached: function() {
+    domReady: function() {
       this.$.dropdown.appendChild(this.children[0]);
     }
   });
