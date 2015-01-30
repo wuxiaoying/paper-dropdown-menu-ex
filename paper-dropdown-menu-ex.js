@@ -6,6 +6,9 @@
     },
     updateLabelVisibility: function(value) {
       this.$.decorator.updateLabelVisibility(value);
+    },
+    update: function(value) {
+      this.$.decorator.update(value);
     }
   });
 

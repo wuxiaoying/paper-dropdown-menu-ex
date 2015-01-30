@@ -7,11 +7,7 @@
         return function(e) {
           var item;
           item = e.detail.item;
-          _this.input.value = item.label || item.getAttribute("label") || item.textContent;
-          _this.input.selectedItemLabel = _this.input.value;
-          if (_this.input.value) {
-            _this.input.$.label.classList.add('selectedItem');
-          }
+          _this.update(item.label || item.getAttribute("label") || item.textContent);
         };
       })(this));
       if (this.dropdownLabel == null) {
@@ -38,6 +34,13 @@
       this["super"]();
       if (this._labelVisible) {
         this.input.label = this.label;
+      }
+    },
+    update: function(value) {
+      this.input.value = value;
+      this.input.selectedItemLabel = this.input.value;
+      if (this.input.value) {
+        this.input.$.label.classList.add('selectedItem');
       }
     }
   });

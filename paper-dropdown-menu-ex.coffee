@@ -7,3 +7,7 @@ Polymer
   updateLabelVisibility: (value) ->
     @$.decorator.updateLabelVisibility value
     return
+
+  update: (value) ->
+    @$.decorator.update value
+    return

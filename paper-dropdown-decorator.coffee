@@ -4,9 +4,7 @@ Polymer
     @input = @querySelector 'paper-dropdown-menu'
     @input.addEventListener 'core-select', (e) =>
       item = e.detail.item
-      @input.value = item.label or item.getAttribute("label") or item.textContent
-      @input.selectedItemLabel = @input.value
-      @input.$.label.classList.add 'selectedItem' if @input.value
+      @update item.label or item.getAttribute("label") or item.textContent
       return
 
     @dropdownLabel ?= @input.label
@@ -25,4 +23,10 @@ Polymer
     @super()
     if @._labelVisible
       @input.label = @label
+    return
+
+  update: (value) ->
+    @input.value = value
+    @input.selectedItemLabel = @input.value
+    @input.$.label.classList.add 'selectedItem' if @input.value
     return
