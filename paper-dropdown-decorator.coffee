@@ -6,6 +6,7 @@ Polymer
       item = e.detail.item
       @input.value = item.label or item.getAttribute("label") or item.textContent
       @input.selectedItemLabel = @input.value
+      @input.$.label.classList.add 'selectedItem' if @input.value
       return
 
     @dropdownLabel ?= @input.label

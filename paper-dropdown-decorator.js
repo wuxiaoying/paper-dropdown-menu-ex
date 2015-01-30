@@ -9,6 +9,9 @@
           item = e.detail.item;
           _this.input.value = item.label || item.getAttribute("label") || item.textContent;
           _this.input.selectedItemLabel = _this.input.value;
+          if (_this.input.value) {
+            _this.input.$.label.classList.add('selectedItem');
+          }
         };
       })(this));
       if (this.dropdownLabel == null) {
