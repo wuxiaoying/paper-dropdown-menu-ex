@@ -1,0 +1,28 @@
+{
+  "name": "paper-dropdown-menu-ex",
+  "version": "0.0.0",
+  "authors": [
+    "Helen Wu <xiaoyingw12@gmail.com>"
+  ],
+  "description": "Extension to paper-dropdown-menu to allow for floating label and slight style changes",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "paper-dropdown-menu"
+  ],
+  "main": "seed-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/wuxiaoying/paper-dropdown-menu-ex/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.2",
+    "paper-elements": "Polymer/paper-elements#~0.5.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^2.0.5"
+  }
+}

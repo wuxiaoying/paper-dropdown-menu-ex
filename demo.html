@@ -1,0 +1,59 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>paper-dropdown-menu-ex Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="paper-dropdown-menu-ex.html">
+  <link rel="import" href="paper-dropdown-ex.html">
+  <link rel="import" href="../font-roboto/roboto.html">
+  <link rel="import" href="../core-menu/core-menu.html">
+  <link rel="import" href="../paper-item/paper-item.html">
+  <style>
+    html {
+      font-family: 'RobotoDraft', sans-serif;
+    }
+
+    body {
+      margin: 20px !important;
+    }
+  </style>
+  </script>
+</head>
+
+<body fullbleed layout vertical unresolved>
+  <paper-dropdown-menu-ex label="My List" floatingLabel>
+    <paper-dropdown class="dropdown">
+      <core-menu selected="{{selected}}">
+        <paper-item>Item 1</paper-item>
+        <paper-item>Item 2</paper-item>
+        <paper-item>Item 3</paper-item>
+      </core-menu>
+    </paper-dropdown>
+  </paper-dropdown-menu-ex>
+
+  <div style="margin-top:40px">With paper-dropdown-ex and no transition on dropdown</div>
+
+  <paper-dropdown-menu-ex label="My List" floatingLabel>
+    <paper-dropdown-ex class="dropdown" transition="">
+      <core-menu selected="{{selected}}">
+        <paper-item>Item 1</paper-item>
+        <paper-item>Item 2</paper-item>
+        <paper-item>Item 3</paper-item>
+      </core-menu>
+    </paper-dropdown-ex>
+  </paper-dropdown-menu-ex>
+</body>
+
+</html>
