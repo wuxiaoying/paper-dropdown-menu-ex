@@ -1,4 +1,6 @@
 Polymer
+  disabled: false
+  
   domReady: ->
     @$.dropdown.appendChild this.children[0]
     @input = @$.decorator.input

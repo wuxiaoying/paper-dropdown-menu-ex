@@ -1,5 +1,6 @@
 (function() {
   Polymer({
+    disabled: false,
     domReady: function() {
       this.$.dropdown.appendChild(this.children[0]);
       this.input = this.$.decorator.input;
