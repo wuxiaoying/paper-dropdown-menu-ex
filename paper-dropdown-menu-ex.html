@@ -6,7 +6,7 @@
 <polymer-element name="paper-dropdown-menu-ex" attributes="label dropdownLabel disabled">
   <template>
     <link rel="stylesheet" href="paper-dropdown-menu-ex.css">
-    <paper-dropdown-decorator id="decorator" label="{{label}}" floatingLabel>
+    <paper-dropdown-decorator id="decorator" label="{{label}}" floatingLabel disabled="{{disabled}}">
       <paper-dropdown-menu id="dropdown" label="{{dropdownLabel}}" disabled="{{disabled}}">
       </paper-dropdown-menu>
     </paper-dropdown-decorator>
