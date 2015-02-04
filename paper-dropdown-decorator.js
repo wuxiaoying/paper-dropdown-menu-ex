@@ -2,7 +2,7 @@
   Polymer({
     attached: function() {
       this["super"]();
-      this.input = this.querySelector('paper-dropdown-menu');
+      this.input = this.querySelector('paper-dropdown-menu,paper-tags-menu');
       this.input.addEventListener('core-select', (function(_this) {
         return function(e) {
           var item;
@@ -37,10 +37,13 @@
       }
     },
     update: function(value) {
+      var _ref;
       this.input.value = value;
       this.input.selectedItemLabel = this.input.value;
       if (this.input.value) {
-        this.input.$.label.classList.add('selectedItem');
+        if ((_ref = this.input.$.label) != null) {
+          _ref.classList.add('selectedItem');
+        }
       }
     }
   });

@@ -1,7 +1,7 @@
 Polymer
   attached: ->
     @super()
-    @input = @querySelector 'paper-dropdown-menu'
+    @input = @querySelector 'paper-dropdown-menu,paper-tags-menu'
     @input.addEventListener 'core-select', (e) =>
       item = e.detail.item
       @update item.label or item.getAttribute("label") or item.textContent
@@ -28,5 +28,5 @@ Polymer
   update: (value) ->
     @input.value = value
     @input.selectedItemLabel = @input.value
-    @input.$.label.classList.add 'selectedItem' if @input.value
+    @input.$.label?.classList.add 'selectedItem' if @input.value
     return
