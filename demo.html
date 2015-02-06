@@ -29,31 +29,50 @@
       margin: 20px !important;
     }
   </style>
-  </script>
+  <script>
+   window.addEventListener('polymer-ready', function(e) {
+     document.querySelector('#wrapper').selected = null;
+   });
+ </script>
 </head>
 
 <body fullbleed layout vertical unresolved>
-  <paper-dropdown-menu-ex label="My List" floatingLabel>
-    <paper-dropdown class="dropdown">
-      <core-menu selected="{{selected}}">
-        <paper-item>Item 1</paper-item>
-        <paper-item>Item 2</paper-item>
-        <paper-item>Item 3</paper-item>
-      </core-menu>
-    </paper-dropdown>
-  </paper-dropdown-menu-ex>
+  <template id="wrapper" is="auto-binding">
+    <paper-dropdown-menu-ex label="My List" floatingLabel>
+      <paper-dropdown class="dropdown">
+        <core-menu class="selector" selected="{{selected}}">
+          <paper-item>Item 1</paper-item>
+          <paper-item>Item 2</paper-item>
+          <paper-item>Item 3</paper-item>
+        </core-menu>
+      </paper-dropdown>
+    </paper-dropdown-menu-ex>
 
-  <div style="margin-top:40px">With paper-dropdown-ex and no transition on dropdown</div>
+    <div style="margin-top:40px">With paper-dropdown-ex and no transition on dropdown. Add the class selector if you want keys to work. </div>
 
-  <paper-dropdown-menu-ex label="My List" floatingLabel>
-    <paper-dropdown-ex class="dropdown" transition="">
-      <core-menu selected="{{selected}}">
-        <paper-item>Item 1</paper-item>
-        <paper-item>Item 2</paper-item>
-        <paper-item>Item 3</paper-item>
-      </core-menu>
-    </paper-dropdown-ex>
-  </paper-dropdown-menu-ex>
+    <paper-dropdown-menu-ex label="My List" floatingLabel>
+      <paper-dropdown-ex class="dropdown" transition="">
+        <core-menu class="selector" selected="{{selected}}">
+          <paper-item>Item 1</paper-item>
+          <paper-item>Item 2</paper-item>
+          <paper-item>Item 3</paper-item>
+        </core-menu>
+      </paper-dropdown-ex>
+    </paper-dropdown-menu-ex>
+
+    <div style="margin-top:40px">Validation</div>
+
+    <paper-dropdown-menu-ex label="My List" error="Required" isInvalid="{{!selected}}" floatingLabel>
+      <paper-dropdown-ex class="dropdown" transition="">
+        <core-menu class="selector" selected="{{selected}}">
+          <paper-item>Item 1</paper-item>
+          <paper-item>Item 2</paper-item>
+          <paper-item>Item 3</paper-item>
+        </core-menu>
+      </paper-dropdown-ex>
+    </paper-dropdown-menu-ex>
+  </template>
+
 </body>
 
 </html>

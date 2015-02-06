@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-a11y-keys/core-a11y-keys.html">
 <link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../paper-dropdown/paper-dropdown.html">
 <link rel="import" href="paper-dropdown-decorator.html">
@@ -12,9 +13,12 @@
       error="{{error}}"
       isInvalid="{{isInvalid}}"
       floatingLabel>
-      <paper-dropdown-menu id="dropdown" label="{{dropdownLabel}}" disabled="{{disabled}}">
+      <paper-dropdown-menu id="dropdown"
+        label="{{dropdownLabel}}"
+        disabled="{{disabled}}">
       </paper-dropdown-menu>
     </paper-dropdown-decorator>
+    <core-a11y-keys keys="up down" on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
   </template>
   <script src="paper-dropdown-menu-ex.js"></script>
 </polymer-element>
