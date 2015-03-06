@@ -45,6 +45,7 @@
           _ref.classList.add('selectedItem');
         }
       }
+      this.updateLabelVisibility(value);
     }
   });
 
