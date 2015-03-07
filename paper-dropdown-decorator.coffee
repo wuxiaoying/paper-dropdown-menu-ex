@@ -29,4 +29,5 @@ Polymer
     @input.value = value
     @input.selectedItemLabel = @input.value
     @input.$.label?.classList.add 'selectedItem' if @input.value
+    @updateLabelVisibility(value)
     return
